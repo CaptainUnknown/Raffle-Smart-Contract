@@ -1,4 +1,4 @@
-# ERC721 Raffle System ?? ![ERC721 Raffle System](https://img.shields.io/badge/1.0.0-brightgreen)
+# ERC721 Raffle System 📜 ![ERC721 Raffle System](https://img.shields.io/badge/1.0.0-brightgreen)
 
 This is a smart contract that implements an ERC-721 Raffle System. It allows for the creation and management of multiple concurrent raffles. Users can buy tickets for a raffle, and at the end of the raffle, a winner is selected using a binary search algorithm.
 
@@ -11,7 +11,7 @@ This contract requires the following dependencies:
 - OpenZeppelin Contracts v4.3.0
 - OpenZeppelin Contracts-upgradeable v4.3.0
 
-## Usage ??
+## Usage 📐
 
 1. Deploy RaffleSystem & RaffleExtended contracts.
 2. Initialize the RaffleSystem contract with the following parameters:
@@ -38,7 +38,7 @@ This contract requires the following dependencies:
    - Parameters:
      - `amount`: The amount of ERC20 tokens to withdraw.
 
-## Functions of `RaffleSystem` ??
+## Functions of `RaffleSystem` 💾
 
 #### `startRaffle(uint128 _price, bool _payableWithERC20, uint64 _duration, address _prizeNFTContract, uint32 _prizeNFTTokenId)`
 
@@ -164,7 +164,7 @@ function getEndedRaffles() public view returns (uint256[] memory)
 - Description: Gets all the IDs of ended raffles.
 - Returns: An array containing the IDs of ended raffles.
 
-## Functions of `RaffleExtended` ??
+## Functions of `RaffleExtended` 💾
 
 #### `getOnGoing()`
 
@@ -209,14 +209,14 @@ function getRecentEntries(uint256 raffleId, uint256 query, uint256 cursor) publi
 - Returns: An array of Purchase structs representing the most recent entries.
 
 
-## Events ?
+## Events ⏰
 
 The contract emits the following events:
 
 - `RaffleStarted(uint256 indexed raffleId, uint256 price, uint256 endTime, Prize rafflePrize)`: Triggered when a new raffle is started.
 - `Winner(uint256 indexed raffleId, address winner)`: Triggered when a raffle is ended and a winner is selected.
 
-## TODOs ?
+## TODOs ✅
 
 - [x] ERC20 Support
 - [x] Cursor for `getRecentEntries` function in `RaffleExtended`.
